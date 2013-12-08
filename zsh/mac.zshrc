@@ -32,7 +32,7 @@ unsetopt correct_all
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git tmux)
+plugins=(tmux)
 
 source $ZSH/oh-my-zsh.sh
 export LANG=zh_CN.UTF-8
@@ -61,6 +61,18 @@ bindkey '^N' down-history
 bindkey '^H' backward-delete-char
 bindkey '^?' backward-delete-char
 
+fancy-ctrl-z () {
+if [[ $#BUFFER -eq 0 ]]; then
+    bg
+    zle redisplay
+  else
+    zle push-input
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+bindkey '^U' backward-kill-line
+
 
 #source z.sh
 source ~/Develop/dofiles/z/z.sh
@@ -70,7 +82,7 @@ source ~/Develop/dofiles/zsh/zsh-syntax-hightlighting/zsh-syntax-highlighting.pl
 GHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 alias vimpath='cd ~/Documents/foursk/vimfiles'
-#set -o vi
+
 
 
 #Mongo
@@ -79,6 +91,7 @@ alias mongo='/usr/local/mongo/bin/mongo'
 
 #vhost
 alias ubuntu='ssh foursk@10.211.55.9'
+
 
 
 alias nginx='sudo /usr/local/sbin/nginx'
