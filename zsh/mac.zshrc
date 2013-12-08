@@ -84,6 +84,9 @@ GHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 alias vimpath='cd ~/Documents/foursk/vimfiles'
 
 
+alias mv 'mv -i'
+alias cp 'cp -i'
+alias rm 'rm -i'
 
 #Mongo
 alias mongo-start='sudo /etc/rc.d/mongo/mongo-start.sh'
