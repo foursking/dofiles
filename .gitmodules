@@ -1,9 +1,9 @@
-[submodule "tmux/tumx-powerline"]
-	path = tmux/tmux-powerline
-	url = https://github.com/erikw/tmux-powerline
 [submodule "solarized"]
 	path = solarized
 	url = https://github.com/altercation/solarized
 [submodule "zsh/zsh-syntax-hightlighting"]
 	path = zsh/zsh-syntax-hightlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "tmux/tmux-powerline"]
+	path = tmux/tmux-powerline
+	url = https://github.com/erikw/tmux-powerline
