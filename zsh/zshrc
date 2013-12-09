@@ -78,6 +78,7 @@ GHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 alias ll='ls -alh'
 alias gdd="git add .&&git commit -m 'update'"
 
+alias tmux='tmux -2'
 #ssh
 alias ssh-aliyun="ssh root@112.124.55.59"
 

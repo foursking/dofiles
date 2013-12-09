@@ -1,5 +1,5 @@
 [submodule "tmux/tumx-powerline"]
-	path = tmux/tumx-powerline
+	path = tmux/tmux-powerline
 	url = https://github.com/erikw/tmux-powerline
 [submodule "solarized"]
 	path = solarized
