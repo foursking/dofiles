@@ -1,0 +1,136 @@
+127.0.0.1	localhost
+127.0.1.1	foursk-ubuntu
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+
+
+
+
+
+127.0.0.1	dev.openvim.com
+127.0.0.1	dev.phpmyadmin.com
+127.0.0.1	dev.foursk.com
+
+
+
+127.0.0.1	wb.foursk.com 127.0.0.1	dev.junkyard.com
+127.0.0.1	dev.twslim.com
+
+
+
+#leqee
+
+127.0.0.1	dev.jjshouse.com
+127.0.0.1	dev.m.jjshouse.com
+127.0.0.1   dev.jenjenhouse.com
+127.0.0.1   dev.fb.jjshouse.com
+127.0.0.1   dev.jjshouseeditor.com
+127.0.0.1   dev.dressfirst.com
+127.0.0.1   editor.cms.com
+127.0.0.1   dev.jennyjoseph.com
+127.0.0.1   dev.cms.com
+127.0.0.1   dev.sendemail.com
+127.0.0.1   dev.amormoda.com
+
+
+
+
+123.129.242.139   hub5idx.shub.sandai.net
+58.254.134.233   hub5pr.sandai.net
+
+
+
+124.160.124.147 test.jjshouse.com
+124.160.124.147 test.jenjenhouse.com
+124.160.124.147 test.amormoda.com
+124.160.124.147 test.jennyjoseph.com
+124.160.124.147 test.dressdepot.com
+124.160.124.147 test.orderfromchina.com
+124.160.124.147 test.dressfirst.com  test.vbridal.com
+23.23.232.129   aa.amormoda.com
+
+50.16.230.173	jjshouse.com editor.jjshouse.com cms.jjshouse.com up.jjshouse.com east.jjshouse.com blog.jjshouse.com
+107.21.242.72	t.jjshouse.com
+
+184.73.222.221 fe-test.dressfirst.com fe-test.dressdepot.com fe-test.vbridal.com
+
+#207.97.227.239 github.com
+#65.74.177.129 www.github.com
+#207.97.227.252 nodeload.github.com
+#207.97.227.243 raw.github.com
+#204.232.175.78 documentcloud.github.com
+#204.232.175.78 pages.github.com
+
+#127.0.0.1  de.dressfirst.com fr.dressfirst.com es.dressfirst.com se.dressfirst.com da.dressfirst.com no.dressfirst.com
+#127.0.0.1  it.dressfirst.com pt.dressfirst.com ru.dressfirst.com fi.dressfirst.com nl.dressfirst.com
+
+#124.160.124.147 de.dressfirst.com fr.dressfirst.com es.dressfirst.com se.dressfirst.com da.dressfirst.com no.dressfirst.com
+#124.160.124.147 it.dressfirst.com pt.dressfirst.com ru.dressfirst.com fi.dressfirst.com nl.dressfirst.com
+
+#50.16.230.173	jjshouse.com editor.jjshouse.com cms.jjshouse.com up.jjshouse.com east.jjshouse.com blog.jjshouse.com
+
+#50.19.244.230  www.dressfirst.com dressfirst.com
+#50.19.244.230  de.dressfirst.com fr.dressfirst.com es.dressfirst.com se.dressfirst.com da.dressfirst.com no.dressfirst.com
+#50.19.244.230  it.dressfirst.com pt.dressfirst.com ru.dressfirst.com fi.dressfirst.com nl.dressfirst.com ja.dressfirst.com el.dressfirst.com
+
+#192.168.1.227  de.dressfirst.com fr.dressfirst.com es.dressfirst.com se.dressfirst.com da.dressfirst.com no.dressfirst.com
+#192.168.1.227  it.dressfirst.com pt.dressfirst.com ru.dressfirst.com fi.dressfirst.com nl.dressfirst.com p.dressfirst.com
+#192.168.1.227  dressdepot.com  www.dressdepot.com  de.dressdepot.com fr.dressdepot.com es.dressdepot.com se.dressdepot.com da.dressdepot.com no.dressdepot.com
+#192.168.1.227  it.dressdepot.com pt.dressdepot.com ru.dressdepot.com fi.dressdepot.com nl.dressdepot.com
+
+# ft dressfirst start
+54.235.241.36 de.dressfirst.com fr.dressfirst.com es.dressfirst.com se.dressfirst.com da.dressfirst.com no.dressfirst.com
+54.235.241.36 it.dressfirst.com pt.dressfirst.com ru.dressfirst.com fi.dressfirst.com nl.dressfirst.com
+54.235.241.36 ar.dressfirst.com he.dressfirst.com ja.dressfirst.com el.dressfirst.com ko.dressfirst.com ar.dressfirst.com
+54.235.241.36 cs.dressfirst.com pl.dressfirst.com tr.dresfirst.com ft.dressfirst.com
+#
+# dressfirst p start
+#192.168.1.227 dressfirst.com p.dressfirst.com de.dressfirst.com fr.dressfirst.com es.dressfirst.com se.dressfirst.com da.dressfirst.com no.dressfirst.com
+#192.168.1.227 it.dressfirst.com pt.dressfirst.com ru.dressfirst.com fi.dressfirst.com nl.dressfirst.com cs.dressfirst.com pl.dressfirst.com
+#192.168.1.227 ar.dressfirst.com he.dressfirst.com ja.dressfirst.com el.dressfirst.com ko.dressfirst.com ar.dressfirst.com tr.dressfirst.com
+#
+# dressfirst localhost start
+#127.0.0.1 dev.dressfirst.com de.dressfirst.com fr.dressfirst.com es.dressfirst.com se.dressfirst.com da.dressfirst.com no.dressfirst.com
+#127.0.0.1 it.dressfirst.com pt.dressfirst.com ru.dressfirst.com fi.dressfirst.com nl.dressfirst.com
+#127.0.0.1 ar.dressfirst.com he.dressfirst.com ja.dressfirst.com el.dressfirst.com cs.dressfirst.com pl.dressfirst.com tr.dressfirst.com
+
+# amormoda lo start
+#127.0.0.1 da.amormoda.com amormoda.nl www.amormoda.fr no.amormoda.com www.amormoda.fr es.amormoda.com www.amormoda.de www.amormoda.se
+#127.0.0.1 fi.amormoda.com www.amormoda.nl it.amormoda.com pt.amormoda.com  ru.amormoda.com
+#127.0.0.1 www.amormoda.com  no.amormoda.com da.amormoda.com
+#127.0.0.1 www.amormoda.fr
+#127.0.0.1 www.amormoda.de
+
+# amormoda ft start
+54.235.241.36  da.amormoda.com amormoda.nl www.amormoda.fr no.amormoda.com www.amormoda.fr es.amormoda.com www.amormoda.de www.amormoda.se
+54.235.241.36  fi.amormoda.com www.amormoda.nl it.amormoda.com pt.amormoda.com  ru.amormoda.com
+54.235.241.36   no.amormoda.com da.amormoda.com
+
+# amormoda p start
+#54.243.147.211  da.amormoda.com amormoda.nl www.amormoda.fr no.amormoda.com www.amormoda.fr es.amormoda.com www.amormoda.de www.amormoda.se
+#54.243.147.211  fi.amormoda.com www.amormoda.nl it.amormoda.com pt.amormoda.com  ru.amormoda.com
+#54.243.147.211  www.amormoda.com  no.amormoda.com da.amormoda.com
+#
+#jjshouse ft start
+54.235.241.36 ft.jjshouse.com
+
+#jennyjoseph localhost start
+#127.0.0.1 dev.jennyjoseph.com de.jennyjoseph.com fr.jennyjoseph.com es.jennyjoseph.com se.jennyjoseph.com da.jennyjoseph.com
+#127.0.0.1 no.jennyjoseph.com it.jennyjoseph.com pt.jennyjoseph.com ru.jennyjoseph.com fi.jennyjoseph.com nl.jennyjoseph.com
+
+#jennyjoseph ft start
+54.235.241.36 ft.jennyjoseph.com de.jennyjoseph.com fr.jennyjoseph.com es.jennyjoseph.com se.jennyjoseph.com da.jennyjoseph.com
+54.235.241.36 it.jennyjoseph.com pt.jennyjoseph.com ru.jennyjoseph.com fi.jennyjoseph.com nl.jennyjoseph.com no.jennyjoseph.com
+
+#jennyjoseph p start
+#107.21.92.62 p.jennyjoseph.com de.jennyjoseph.com fr.jennyjoseph.com es.jennyjoseph.com se.jennyjoseph.com da.jennyjoseph.com
+#107.21.92.62 no.jennyjoseph.com it.jennyjoseph.com pt.jennyjoseph.com ru.jennyjoseph.com fi.jennyjoseph.com nl.jennyjoseph.com
+#
+54.235.241.36 mt.jjshouse.com
+54.235.241.36 mt.jenjenhouse.com

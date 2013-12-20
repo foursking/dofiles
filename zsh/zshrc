@@ -79,15 +79,34 @@ alias ll='ls -alh'
 alias gdd="git add .&&git commit -m 'update'"
 
 alias tmux='tmux -2'
+
 #ssh
 alias ssh-aliyun="ssh root@112.124.55.59"
+alias ssh-jjs='ssh -i ~/.ssh/test_rsa.rsa -p 38022 ec2-user@jjshouse.com'
+alias ssh-cms='ssh -i ~/.ssh/test_rsa.rsa -p 38022 ec2-user@cms-t.dhvalue.com'
 
 
 #mongo
 alias mongo-start="sudo /usr/local/mongo/servers/mongo-start.sh"
 alias mongo-openvim="sudo /usr/local/mongo/bin/mongo 127.0.0.1:27017/openvim -uopenvim -p"
-
 alias apa-restart="sudo apachectl restart"
+
+
+safe_rm () {
+  for last; do
+    echo $last | grep '^-' >/dev/null 2>&1
+    if [[ $? == 1 ]]; then
+      if [ -e "$last" ]; then
+        file=$(echo $last | awk -F/ '{print $NF}')
+        mv $last ~/.myTrash/"$file-$(date +%Y-%m-%d-%H-%M-%S)"
+      else
+        echo "rm: $last: No such file or directory"
+      fi
+    fi
+  done
+}
+
+alias rm='safe_rm'
 
 
 #vim
@@ -99,12 +118,11 @@ alias ..2="cd ../.."
 alias ..3="cd ../../.."
 alias ..4="cd ../../../.."
 
+#mysql to 50-db
+alias mysql-dev='mysql -udbuser0114 -pdbpswd0114 -h192.168.1.50'
 
 
-#jjshouse
-alias gojjs="cd ~/workspace/jjshouse/"
-alias gov5="cd ~/workspace/jjshouse/v5/"
-alias gounit="cd ~/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/test/"
 
+#unit
 alias phpunit="/home/foursk/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/vendor/phpunit/phpunit/phpunit.php"
 alias phpunit-coverage="/home/foursk/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/vendor/phpunit/phpunit/phpunit.php --coverage-html"
