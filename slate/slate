@@ -1,0 +1,133 @@
+# Configs
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config secondsBetweenRepeat 0.1
+config checkDefaultsOnLoad true
+config focusCheckWidthMax 3000
+config focusPreferSameApp false
+#config keyboardLayout dvorak
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+#config windowHintsDuration 5
+config windowHintsSpread true
+#config windowHintsOrder persist
+config orderScreensLeftToRight true
+ 
+# Monitor Aliases
+alias mon-laptop     0
+alias mon-samsung    1
+ 
+# Misc Aliases
+alias showHintsLeftHand hint QWERTASDFG 
+alias showNormalHint hint QWERTYUIOPASDFGHJKL;
+alias browser   'Google Chrome'
+alias editor    'MacVim'
+alias scm       'SourceTree'
+ 
+# Abstract positions
+alias full          move screenOriginX;screenOriginY                    screenSizeX;screenSizeY
+
+alias leftless      move screenOriginX;screenOriginY                    screenSizeX*0.3;screenSizeY
+alias lefthalf      move screenOriginX;screenOriginY                    screenSizeX/2;screenSizeY
+alias leftmost      move screenOriginX;screenOriginY                    screenSizeX*0.7;screenSizeY
+
+alias rightless     move screenOriginX+screenSizeX*0.7;screenOriginY    screenSizeX*0.3;screenSizeY
+alias righthalf     move screenOriginX+screenSizeX/2;screenOriginY      screenSizeX/2;screenSizeY
+alias rightmost     move screenOriginX+screenSizeX*0.3;screenOriginY    screenSizeX*0.7;screenSizeY
+alias righttop      move screenOriginX+screenSizeX*0.3;screenOriginY    screenSizeX*0.7;screenSizeY/2
+alias rightbottom   move screenOriginX+screenSizeX*0.3;screenOriginY+screenSizeY/2    screenSizeX*0.7;screenSizeY/2
+
+# Concrete positions
+alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-laptop}
+alias 1-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-laptop}
+alias 1-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-laptop}
+alias 2-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-samsung}
+alias 2-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-samsung}
+alias 2-righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-samsung}
+alias 2-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2       ${mon-samsung}
+ 
+# 2 Monitor layout
+layout 2monitors 'iTerm':MAIN_FIRST                       ${2-rightbottom} | ${1-left}
+layout 2monitors 'Safari':REPEAT                          ${1-full}
+layout 2monitors 'Nightly':REPEAT                          ${1-full}
+layout 2monitors 'Sublime Text 2':REPEAT              ${1-full}
+layout 2monitors 'MacVim':REPEAT              		  ${1-full}
+layout 2monitors 'Mail':MAIN_FIRST                        ${2-left}
+layout 2monitors 'Path Finder':MAIN_FIRST                 ${2-righttop}
+layout 2monitors 'Xcode':REPEAT                           ${1-full}
+layout 2monitors 'Eclipse':REPEAT                         ${1-full}
+layout 2monitors 'iTunes':REPEAT                          ${1-full}
+ 
+# 1 Monitor layout
+layout 1monitor 'iTerm':MAIN_FIRST                       ${1-right}
+layout 1monitor 'Sublime Text 2':MAIN_FIRST              ${1-left}
+layout 1monitor 'MacVim':MAIN_FIRST              		 ${1-left}
+layout 1monitor 'Safari':REPEAT                          ${1-full}
+layout 1monitor 'Nightly':REPEAT                          ${1-full}
+layout 1monitor 'Mail':MAIN_FIRST                        ${1-full}
+layout 1monitor 'Path Finder':MAIN_FIRST                 ${1-full}
+layout 1monitor 'Xcode':REPEAT                           ${1-full}
+layout 1monitor 'Eclipse':REPEAT                         ${1-full}
+layout 1monitor 'iTunes':REPEAT                          ${1-full}
+ 
+# Default Layouts
+default 2monitors resolutions:${mon-laptop};${mon-samsung};
+default 1monitor  resolutions:${mon-laptop}
+ 
+# Numpad location Bindings
+#bind pad0 ${showHintsLeftHand}
+#bind pad1 ${leftless}
+#bind pad2 push bottom bar-resize:screenSizeY/2
+#bind pad3 ${rightless}
+#bind pad4 ${lefthalf}
+#bind pad5 ${full}
+#bind pad6 ${righthalf}
+#bind pad7 ${leftmost}
+#bind pad8 push top bar-resize:screenSizeY/2
+#bind pad9 ${rightmost}
+#bind padEnter grid padding:5 ${mon-laptop}:6,2 ${mon-samsung}:8,3
+#bind pad+ throw next
+#bind pad. focus behind
+#bind pad* layout 2monitors
+#bind pad/ layout 1monitor
+ 
+ 
+# ======================================
+# The HYPER key
+# ======================================
+ 
+alias hyper ctrl;shift;alt;cmd
+
+bind esc:${hyper}   ${showNormalHint}
+bind f2:${hyper}    relaunch
+bind f3:${hyper}    grid 
+ 
+bind space:${hyper} ${full}
+# Location bindings
+bind a:${hyper} ${lefthalf}
+bind s:${hyper} ${righthalf}
+bind d:${hyper} ${righttop}
+bind f:${hyper} ${rightbottom}
+bind z:${hyper} ${leftmost}
+bind x:${hyper} ${leftless}
+bind c:${hyper} ${rightless}
+bind v:${hyper} ${rightmost}
+
+# Focus Bindings
+bind l:${hyper}     focus right
+bind h:${hyper}     focus left
+bind k:${hyper}     focus up
+bind j:${hyper}     focus down
+ 
+# App bindings
+bind b:${hyper} focus ${browser}
+bind e:${hyper} focus ${editor}
+bind r:${hyper} focus 'Sublime Text'
+bind w:${hyper} focus ${scm} 
+bind m:${hyper} focus '邮件'
+bind i:${hyper} focus 'iTerm'
+bind q:${hyper} focus 'QQ'
+bind t:${hyper} focus 'Doit.im'
+bind p:${hyper} focus 'Finder'
+
