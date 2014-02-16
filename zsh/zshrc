@@ -98,7 +98,11 @@ safe_rm () {
     if [[ $? == 1 ]]; then
       if [ -e "$last" ]; then
         file=$(echo $last | awk -F/ '{print $NF}')
-        mv $last ~/.local/share/Trash/files/"$file-$(date +%Y-%m-%d-%H-%M-%S)"
+			trash="$HOME/.local/share/Trash/files";
+		if [ ! -d "$trash" ]; then
+			trash="$HOME/.Trash"
+		fi
+        mv $last $trash"/$file-$(date +%Y-%m-%d-%H-%M-%S)"
       else
         echo "rm: $last: No such file or directory"
       fi
