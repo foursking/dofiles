@@ -41,7 +41,7 @@ DISABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git svn tmux)
-
+export LANG=zh_CN.UTF-8
 export PIP2EVAL_TMP_FILE_PATH=/tmp/shm
 
 
@@ -69,7 +69,7 @@ bindkey '^Z' fancy-ctrl-z
 bindkey '^U' backward-kill-line
 
 #source zsh-syntax-hightlighting
-source ~/Develop/dotfiles/zsh/zsh-syntax-hightlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/Develop/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 GHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 
@@ -98,7 +98,11 @@ safe_rm () {
     if [[ $? == 1 ]]; then
       if [ -e "$last" ]; then
         file=$(echo $last | awk -F/ '{print $NF}')
-        mv $last ~/.local/share/Trash/files/"$file-$(date +%Y-%m-%d-%H-%M-%S)"
+			trash="$HOME/.local/share/Trash/files";
+		if [ ! -d "$trash" ]; then
+			trash="$HOME/.Trash"
+		fi
+        mv $last $trash"/$file-$(date +%Y-%m-%d-%H-%M-%S)"
       else
         echo "rm: $last: No such file or directory"
       fi
