@@ -1,4 +1,5 @@
 dofiles
 =======
 
-dofiles for ubuntu &amp; mac
+dofiles for ubuntu &  mac
+dofiles for ubuntu &  mac

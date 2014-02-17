@@ -28,7 +28,12 @@
 127.0.0.1   dev.cms.com
 127.0.0.1   dev.sendemail.com
 127.0.0.1   dev.amormoda.com
+127.0.0.1   dev.sf2.com
+127.0.0.1   dev.stb.com
+127.0.0.1   dev.dressdepot.com
 
+
+#127.0.0.1 www.dressfirst.fr
 
 
 
@@ -80,7 +85,7 @@
 54.235.241.36 it.dressfirst.com pt.dressfirst.com ru.dressfirst.com fi.dressfirst.com nl.dressfirst.com
 54.235.241.36 ar.dressfirst.com he.dressfirst.com ja.dressfirst.com el.dressfirst.com ko.dressfirst.com ar.dressfirst.com
 54.235.241.36 cs.dressfirst.com pl.dressfirst.com tr.dresfirst.com ft.dressfirst.com
-#
+##
 # dressfirst p start
 #192.168.1.227 dressfirst.com p.dressfirst.com de.dressfirst.com fr.dressfirst.com es.dressfirst.com se.dressfirst.com da.dressfirst.com no.dressfirst.com
 #192.168.1.227 it.dressfirst.com pt.dressfirst.com ru.dressfirst.com fi.dressfirst.com nl.dressfirst.com cs.dressfirst.com pl.dressfirst.com
@@ -116,8 +121,13 @@
 #127.0.0.1 no.jennyjoseph.com it.jennyjoseph.com pt.jennyjoseph.com ru.jennyjoseph.com fi.jennyjoseph.com nl.jennyjoseph.com
 
 #jennyjoseph ft start
-54.235.241.36 ft.jennyjoseph.com de.jennyjoseph.com fr.jennyjoseph.com es.jennyjoseph.com se.jennyjoseph.com da.jennyjoseph.com
-54.235.241.36 it.jennyjoseph.com pt.jennyjoseph.com ru.jennyjoseph.com fi.jennyjoseph.com nl.jennyjoseph.com no.jennyjoseph.com
+#54.235.241.36 ft.jennyjoseph.com de.jennyjoseph.com fr.jennyjoseph.com es.jennyjoseph.com se.jennyjoseph.com da.jennyjoseph.com
+#54.235.241.36 it.jennyjoseph.com pt.jennyjoseph.com ru.jennyjoseph.com fi.jennyjoseph.com nl.jennyjoseph.com no.jennyjoseph.com
+
+54.235.241.36 ft.jennyjoseph.com 
+54.235.241.36 fr.jennyjoseph.com
+
+
 
 #jennyjoseph p start
 #107.21.92.62 p.jennyjoseph.com de.jennyjoseph.com fr.jennyjoseph.com es.jennyjoseph.com se.jennyjoseph.com da.jennyjoseph.com
