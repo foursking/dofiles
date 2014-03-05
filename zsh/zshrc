@@ -128,5 +128,5 @@ alias mysql-dev='mysql -udbuser0114 -pdbpswd0114 -h192.168.1.50'
 
 
 #unit
-alias phpunit="/home/foursk/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/vendor/phpunit/phpunit/phpunit.php"
-alias phpunit-coverage="/home/foursk/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/vendor/phpunit/phpunit/phpunit.php --coverage-html"
+#alias phpunit="/home/foursk/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/vendor/phpunit/phpunit/phpunit.php"
+#alias phpunit-coverage="/home/foursk/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/vendor/phpunit/phpunit/phpunit.php --coverage-html"

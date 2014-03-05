@@ -31,6 +31,9 @@
 127.0.0.1   dev.sf2.com
 127.0.0.1   dev.stb.com
 127.0.0.1   dev.dressdepot.com
+127.0.0.1   dev.tiny.com
+127.0.0.1   dev.os.com
+127.0.0.1   dev.dz.com
 
 
 #127.0.0.1 www.dressfirst.fr
@@ -114,7 +117,7 @@
 #54.243.147.211  www.amormoda.com  no.amormoda.com da.amormoda.com
 #
 #jjshouse ft start
-54.235.241.36 ft.jjshouse.com
+#54.235.241.36 ft.jjshouse.com
 
 #jennyjoseph localhost start
 #127.0.0.1 dev.jennyjoseph.com de.jennyjoseph.com fr.jennyjoseph.com es.jennyjoseph.com se.jennyjoseph.com da.jennyjoseph.com
