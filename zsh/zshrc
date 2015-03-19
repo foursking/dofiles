@@ -40,10 +40,10 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn tmux)
+plugins=(git svn tmux colored-man osx rsync brew brew-cask zsh_reload)
 export LANG=zh_CN.UTF-8
 export PIP2EVAL_TMP_FILE_PATH=/tmp/shm
-
+export PATH=$PATH:/Users/mac/Develop/dotfiles/bin
 
 source $ZSH/oh-my-zsh.sh
 source ~/Develop/dotfiles/z/z.sh
@@ -110,6 +110,44 @@ safe_rm () {
   done
 }
 
+
+# iterm coloring
+function tab-color() {
+    if [[ $# == 1 ]]
+    then
+        # convert hex to decimal
+        hex=$1
+        if [[ ${hex:0:1} == "#" ]]
+        then
+            # strip leading hash sign
+            hex=${hex:1:6}
+        fi
+        if [[ ${#hex} == 3 ]]
+        then
+            # handle 3-letter hex codes
+            hex="${hex:0:1}${hex:0:1}${hex:1:1}${hex:1:1}${hex:2:1}${hex:2:1}"
+        fi
+        r=$(printf "%d" 0x${hex:0:2})
+        g=$(printf "%d" 0x${hex:2:2})
+        b=$(printf "%d" 0x${hex:4:2})
+    else
+        r=$1
+        g=$2
+        b=$3
+    fi
+    echo -ne "\033]6;1;bg;red;brightness;$r\a"
+    echo -ne "\033]6;1;bg;green;brightness;$g\a"
+    echo -ne "\033]6;1;bg;blue;brightness;$b\a"
+}
+function tab-red() { tab-color 203 111 111; }
+function tab-green() { tab-color 6cc276; }
+function tab-yellow() { tab-color "#e8e9ac"; }
+function tab-blue() { tab-color 6f8ccc; }
+function tab-purple() { tab-color a789d4; }
+function tab-orange() { tab-color fbbc79; }
+function tab-white() { tab-color fff; }
+function tab-gray() { tab-color c3c3c3c; }
+
 alias rm='safe_rm'
 
 
@@ -130,3 +168,29 @@ alias mysql-dev='mysql -udbuser0114 -pdbpswd0114 -h192.168.1.50'
 #unit
 alias phpunit="/home/foursk/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/vendor/phpunit/phpunit/phpunit.php"
 alias phpunit-coverage="/home/foursk/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/vendor/phpunit/phpunit/phpunit.php --coverage-html"
+
+alias vimenc='vim -c '\''let $enc = &fileencoding | execute "!echo Encoding:  $enc" | q'\''' 
+
+alias ssh-250="sshpass -p 'Em.SWYXlzxn0Q' ssh xyzs@183.61.70.250 -p 48000"
+alias json="python -mjson.tool"
+
+extract () {
+    if [ -f $1 ] ; then
+      case $1 in
+        *.tar.bz2)   tar xjf $1     ;;
+        *.tar.gz)    tar xzf $1     ;;
+        *.bz2)       bunzip2 $1     ;;
+        *.rar)       unrar e $1     ;;
+        *.gz)        gunzip $1      ;;
+        *.tar)       tar xf $1      ;;
+        *.tbz2)      tar xjf $1     ;;
+        *.tgz)       tar xzf $1     ;;
+        *.zip)       unzip $1       ;;
+        *.Z)         uncompress $1  ;;
+        *.7z)        7z x $1        ;;
+        *)     echo "'$1' cannot be extracted via extract()" ;;
+         esac
+     else
+         echo "'$1' is not a valid file"
+     fi
+}
