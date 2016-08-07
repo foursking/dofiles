@@ -13,7 +13,7 @@ if [[ $FILE = "" ]]; then
 	echo
 else
 	echo $FILE
-    /usr/local/Cellar/lrzsz/0.12.20/bin/sz "$FILE"
+	/usr/local/bin/sz "$FILE"
 	echo \# Received $FILE
 	echo
 fi

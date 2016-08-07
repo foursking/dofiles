@@ -44,6 +44,9 @@ plugins=(git svn tmux colored-man osx rsync brew brew-cask zsh_reload)
 export LANG=zh_CN.UTF-8
 export PIP2EVAL_TMP_FILE_PATH=/tmp/shm
 export PATH=$PATH:/Users/mac/Develop/dotfiles/bin
+export PATH=$PATH:/usr/local/Cellar/php55/5.5.27_2/bin
+
+source $(brew --prefix php-version)/php-version.sh && php-version 5
 
 source $ZSH/oh-my-zsh.sh
 source ~/Develop/dotfiles/z/z.sh
@@ -148,7 +151,8 @@ function tab-orange() { tab-color fbbc79; }
 function tab-white() { tab-color fff; }
 function tab-gray() { tab-color c3c3c3c; }
 
-alias rm='safe_rm'
+#alias rm='safe_rm'
+
 
 
 #vim
@@ -164,15 +168,42 @@ alias ..4="cd ../../../.."
 alias mysql-dev='mysql -udbuser0114 -pdbpswd0114 -h192.168.1.50'
 
 
-
 #unit
 alias phpunit="/home/foursk/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/vendor/phpunit/phpunit/phpunit.php"
 alias phpunit-coverage="/home/foursk/workspace/jjshouse/v5/vendor/blu3gui7ar/esmeralda/vendor/phpunit/phpunit/phpunit.php --coverage-html"
 
 alias vimenc='vim -c '\''let $enc = &fileencoding | execute "!echo Encoding:  $enc" | q'\''' 
 
-alias ssh-250="sshpass -p 'Em.SWYXlzxn0Q' ssh xyzs@183.61.70.250 -p 48000"
+alias ssh250="sshpass -p 'Em.SWYXlzxn0Q' ssh xyzs@183.61.70.250 -p 48000"
+
+alias ssh250-l="sshpass -p 'Yx29kKs574W5tE' ssh luyf@183.61.70.250 -p 48000"
+
+
+
+
+alias ssh22="sshpass -p '3BE5EF429769ACBB7B9BB73443EA9FEE' ssh kingnet@192.168.78.22 -p 22"
+alias ssh28="sshpass -p 'Em.SWYXlzxn0Q' ssh kingnet@192.168.78.28 -p 22"
+
+
+alias sshausetest="sshpass -p 'xiaofeiji' ssh foursking@112.74.131.84"
+
+#alias sshausetest="sshpass -p '1989712' ssh root@112.74.131.84"
+alias sshausezhengshi="sshpass -p 'huaBEI1989712' ssh root@120.24.231.106"
+
+
+alias ssh20='sshpass -p "qaz@&-%$GF2013" ssh kingnet@192.168.78.20'
+
 alias json="python -mjson.tool"
+alias vi="vim"
+
+alias vim='/usr/local/Cellar/vim/7.4.430_1/bin/vim'
+alias vimdiff='/usr/local/Cellar/vim/7.4.430_1/bin/vimdiff'
+
+alias fuck='$(thefuck $(fc -ln -1))'
+alias FUCK='fuck'
+
+
+alias phptags='ctags --langmap=php:.engine.inc.module.theme.php  --php-kinds=cdf  --languages=php'
 
 extract () {
     if [ -f $1 ] ; then
@@ -194,3 +225,5 @@ extract () {
          echo "'$1' is not a valid file"
      fi
 }
+
+source /Users/mac/.iterm2_shell_integration.zsh
